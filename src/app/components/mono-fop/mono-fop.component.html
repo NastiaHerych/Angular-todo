@@ -1,236 +1,215 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Відкрити рахунок для ФОП</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <header class="header__common">
-      <nav class="navigation-common">
-        <ul class="navigation-common__list">
-          <li class="navigation-common__item">
-            <a href="https://www.monobank.ua/dashboard">Дашборд</a>
+<header class="header__common">
+  <div class="wrapper wrapper-header__common">
+    <nav class="navigation-common">
+      <ul class="navigation-common__list">
+        <li class="navigation-common__item">
+          <a href="https://www.monobank.ua/dashboard">Дашборд</a>
+        </li>
+        <li class="navigation-common__item">
+          <a href="https://api.monobank.ua/docs/">API</a>
+        </li>
+        <li class="navigation-common__item">
+          <a href="https://www.monobank.ua/contacts">Контакти</a>
+        </li>
+        <li class="navigation-common__item">
+          <select>
+            <option value="value1" selected>Укр</option>
+            <option value="value2">Eng</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<header class="header__additional">
+  <div class="wrapper wrapper-header__additional">
+    <div class="content content-header__additional">
+      <div class="header-logo">
+        <a href="https://www.monobank.ua">
+          monobank <span> Universal bank </span></a
+        >
+      </div>
+      <nav class="navigation-additional">
+        <ul class="navigation-additional__list">
+          <li class="navigation-additional__item">
+            <a href="#card-menu">Картки</a>
           </li>
-          <li class="navigation-common__item">
-            <a href="https://api.monobank.ua/docs/">API</a>
+          <li class="navigation-additional__item active">
+            <a href="#">ФОП</a>
           </li>
-          <li class="navigation-common__item">
-            <a href="https://www.monobank.ua/contacts">Контакти</a>
+          <li class="navigation-additional__item">
+            <a href="https://www.monobank.ua/deposit">Депозити</a>
           </li>
-          <li class="navigation-common__item">
-            <select>
-              <option value="value1" selected>Укр</option>
-              <option value="value2">Eng</option>
-            </select>
+          <li class="navigation-additional__item">
+            <a href="https://www.monobank.ua/military-bonds">Облігації</a>
+          </li>
+          <li class="navigation-additional__item">
+            <a href="https://chast.monobank.ua">Покупка частинами</a>
+          </li>
+          <li class="navigation-additional__item">
+            <a href="https://www.monobank.ua/international"
+              >Міжнародні перекази</a
+            >
           </li>
         </ul>
       </nav>
-    </header>
-    <header class="header__additional">
-      <div class="header__additional-wrapper">
-        <div class="header-logo">
-          <a href="https://www.monobank.ua">
-            monobank <span> Universal bank </span></a
-          >
-        </div>
-        <nav class="navigation-additional">
-          <ul class="navigation-additional__list">
-            <li class="navigation-additional__item">
-              <a href="#card-menu">Картки</a>
-            </li>
-            <li class="navigation-additional__item active">
-              <a href="#">ФОП</a>
-            </li>
-            <li class="navigation-additional__item">
-              <a href="https://www.monobank.ua/deposit">Депозити</a>
-            </li>
-            <li class="navigation-additional__item">
-              <a href="https://www.monobank.ua/military-bonds">Облігації</a>
-            </li>
-            <li class="navigation-additional__item">
-              <a href="https://chast.monobank.ua">Покупка частинами</a>
-            </li>
-            <li class="navigation-additional__item">
-              <a href="https://www.monobank.ua/international"
-                >Міжнародні перекази</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    </div>
+  </div>
+</header>
 
-    <br />
-    <hr />
-    <br />
-    <section class="section section-banner">
-      <div class="banner__wrapper">
-        <div class="banner__content">
-          <div class="banner__description">
-            <h1 class="text text-title">
-              Ми знову прибрали все зайве, щоб ви отримали кращий досвід.
-            </h1>
-            <p class="text text-description">
-              Залиште номер телефону, і ми надішлемо посилання на додаток, де
-              можна відкрити рахунок ФОП
+<section class="section section-banner">
+  <div class="wrapper wrapper-banner">
+    <div class="content content-banner">
+      <div class="banner__description">
+        <h1 class="text text-title">
+          Ми знову прибрали все зайве, щоб ви отримали кращий досвід.
+        </h1>
+        <p class="text text-description">
+          Залиште номер телефону, і ми надішлемо посилання на додаток, де можна
+          відкрити рахунок ФОП
+        </p>
+        <form class="get-fop-form">
+          <input
+            class="get-fop-form__input"
+            type="tel"
+            placeholder="+380 (XX) XXX-XX-XX"
+          />
+          <button class="button button-primary" type="submit">
+            Хочу рахунок ФОП
+          </button>
+        </form>
+      </div>
+
+      <div class="banner__img">
+        <img
+          class="banner-photo"
+          src="assets/images/cat.jpg"
+          alt="monobank logo cat"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-accountant">
+  <div class="wrapper wrapper-accountant">
+    <div class="content content-accountant">
+      <div class="accountant__content-first">
+        <div class="accountant__img">
+          <img
+            src="assets/images/accountant.jpg"
+            alt="accountant room"
+            width="600px"
+          />
+        </div>
+
+        <div class="accountant__description">
+          <h2 class="text text-title">Бухгалтерський кабінет</h2>
+          <p class="text text-description">
+            Окремий бухгалтерський кабінет для керування рахунком ФОП.
+          </p>
+          <p class="text text-description">
+            Можна додати до двох додаткових номерiв телефону для роботи у
+            веб-кабінеті.
+          </p>
+
+          <button class="button button-secondary" type="button">
+            Увійти в кабінет
+          </button>
+        </div>
+      </div>
+
+      <div class="accountant__content-second">
+        <h2 class="text text-title">Ви так довго цього чекали</h2>
+        <ul class="accountant__advantages">
+          <li class="accountant__advantages-item">
+            <svg></svg>
+            <p>
+              Повністю дистанційне обслуговування: не потрібно відвідувати точку
+              видачі або звертатися до відділення
             </p>
-            <form class="get-fop-form">
-              <input
-                class="get-fop-form__input"
-                type="tel"
-                placeholder="+380 (XX) XXX-XX-XX"
-              />
-              <button class="button button-primary" type="submit">
-                Хочу рахунок ФОП
-              </button>
-            </form>
-          </div>
-
-          <div class="banner__img">
-            <img src="../../../images/cat.webp" alt="monobank logo cat" />
-          </div>
-        </div>
+          </li>
+          <li class="accountant__advantages-item">
+            <svg></svg>
+            <p class="text text-description">
+              Керування всіма рахунками monobank в одному додатку
+            </p>
+            <p class="text text-description grey">
+              Один додаток для ФОП і особистого рахунку
+            </p>
+          </li>
+          <li class="accountant__advantages-item">
+            <svg></svg>
+            <p class="text text-description">
+              Платежі з валютних рахунків 24/7/365, а не тільки з 10:00 до 15:00
+            </p>
+            <p class="text text-description grey">
+              Не потрібно чекати поки відкриється міжбанк, щоб продати валюту.
+              Валютообмін 24/7
+            </p>
+          </li>
+          <li class="accountant__advantages-item">
+            <svg></svg>
+            <p class="text text-description">
+              Окремий бухгалтерський веб-кабінет . Можна додати до двох
+              додаткових номерiв телефону для роботи у веб-кабінеті з рахунком
+              ФОП
+            </p>
+          </li>
+          <li class="accountant__advantages-item">
+            <svg></svg>
+            <p class="text text-description">Вигідний курс обміну валют</p>
+          </li>
+          <li class="accountant__advantages-item">
+            <svg></svg>
+            <p class="text text-description">
+              Дружній фінансовий моніторинг і валютний контроль
+            </p>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <br />
-    <hr />
-    <br />
-    <section class="section section-accountant">
-      <div class="accountant__wrapper">
-        <div class="accountant__content">
-          <div class="accountant__content-first">
-            <div class="accountant__img">
-              <img src="" alt="accountant room" />
-            </div>
+<section class="section section-steps">
+  <div class="wrapper wrapper-steps">
+    <div class="content content-steps">
+      <h2 class="text text--title"></h2>
+      <ol class="steps__list">
+        <li class="steps__list-item">
+          <svg></svg>
+          <p class="text text-description">
+            Пройти швидку реєстрацію в додатку monobank та отримати картку
+          </p>
+        </li>
+        <li class="steps__list-item">
+          <svg></svg>
+          <p class="text text-description">
+            Бути зареєстрованим як фізична особа-підприємець
+          </p>
+        </li>
+        <li class="steps__list-item">
+          <svg></svg>
+          <p class="text text-description">
+            Відкрити рахунок ФОП у додатку monobank в 1 торкання
+          </p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
 
-            <div class="accountant__description">
-              <h2 class="text text-title">Бухгалтерський кабінет</h2>
-              <p class="text text-description">
-                Окремий бухгалтерський кабінет для керування рахунком ФОП.
-              </p>
-              <p class="text text-description">
-                Можна додати до двох додаткових номерiв телефону для роботи у
-                веб-кабінеті.
-              </p>
-
-              <button class="button button-secondary" type="button">
-                Увійти в кабінет
-              </button>
-            </div>
-          </div>
-
-          <div class="accountant__content-second">
-            <h2 class="text text-title">Ви так довго цього чекали</h2>
-            <ul class="accountant__advantages">
-              <li class="accountant__advantages-item">
-                <svg style="width: 20px; height: 20px; background: black"></svg>
-                <p>
-                  Повністю
-                  <svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                  дистанційне обслуговування: не потрібно відвідувати точку
-                  видачі або звертатися до відділення
-                </p>
-              </li>
-              <li class="accountant__advantages-item">
-                <svg style="width: 20px; height: 20px; background: black"></svg>
-                <p class="text text-description">
-                  Керування всіма рахунками monobank в одному додатку<svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                </p>
-                <p class="text text-description grey">
-                  Один додаток для ФОП і особистого рахунку
-                </p>
-              </li>
-              <li class="accountant__advantages-item">
-                <svg style="width: 20px; height: 20px; background: black"></svg>
-                <p class="text text-description">
-                  Платежі з валютних рахунків<svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                  24/7/365, а не тільки з 10:00 до 15:00
-                </p>
-                <p class="text text-description grey">
-                  Не потрібно чекати поки відкриється міжбанк, щоб продати
-                  валюту. Валютообмін 24/7
-                </p>
-              </li>
-              <li class="accountant__advantages-item">
-                <svg style="width: 20px; height: 20px; background: black"></svg>
-                <p class="text text-description">
-                  Окремий бухгалтерський веб-кабінет
-                  <svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                  >. Можна додати до двох додаткових номерiв телефону для роботи
-                  у веб-кабінеті з рахунком ФОП
-                </p>
-              </li>
-              <li class="accountant__advantages-item">
-                <svg style="width: 20px; height: 20px; background: black"></svg>
-                <p class="text text-description">
-                  Вигідний курс обміну валют<svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                </p>
-              </li>
-              <li class="accountant__advantages-item">
-                <svg style="width: 20px; height: 20px; background: black"></svg>
-                <p class="text text-description">
-                  Дружній фінансовий моніторинг і валютний контроль<svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <br />
-    <hr />
-    <br />
-    <section class="section section-steps">
-      <div class="steps__wrapper">
-        <div class="steps__content">
-          <h2 class="text text--title"></h2>
-          <ol class="steps__list">
-            <li class="steps__list-item">
-              <svg style="width: 20px; height: 20px; background: black"></svg>
-              <p class="text text-description">
-                Пройти швидку реєстрацію в додатку monobank та отримати картку
-              </p>
-            </li>
-            <li class="steps__list-item">
-              <svg style="width: 20px; height: 20px; background: black"></svg>
-              <p class="text text-description">
-                Бути зареєстрованим як фізична особа-підприємець
-              </p>
-            </li>
-            <li class="steps__list-item">
-              <svg style="width: 20px; height: 20px; background: black"></svg>
-              <p class="text text-description">
-                Відкрити рахунок ФОП у додатку monobank в 1 торкання
-              </p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <br />
-    <hr />
-    <br />
-    <section class="section section-tariffs">
+<section class="section section-tariffs">
+  <div class="wrapper wrapper-tarrifs">
+    <div class="content content-tariffs">
       <h2 class="text text-title">Тарифи</h2>
-      <img src="" alt="mono rocket" />
+      <img
+        class="mono-rocket-img"
+        src="assets/images/rocket.jpg"
+        alt="mono rocket"
+        width="50px"
+      />
       <table>
         <thead>
           <tr>
@@ -276,125 +255,111 @@
       </table>
       <p class="text text-description">Станом на 26 червня 2020 р.</p>
       <a href="">Детальні тарифи</a>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <br />
-    <hr />
-    <br />
-    <section class="section section-get-card">
-      <div class="card__wrapper">
-        <div class="card__content">
-          <div class="card__description">
-            <h2 class="text text-title">Немає картки monobank?</h2>
-            <p class="text text--description">
-              Не страшно, її можна отримати просто зараз
-            </p>
-            <button type="button" class="button button-primary">
-              Отримати картку
-            </button>
-            <p class="text text-description">
-              Відкриття картки ні до чого не зобов'язує. Крім рахунка ФОП у нас
-              дуже багато крутих пропозицій
-            </p>
-          </div>
-
-          <div class="card_image">
-            <img src="" alt="card monobank" />
-          </div>
-        </div>
+<section class="section section-get-card">
+  <div class="wrapper wrapper-card">
+    <div class="content content-card">
+      <div class="card__description">
+        <h2 class="text text-title">Немає картки monobank?</h2>
+        <p class="text text--description">
+          Не страшно, її можна отримати просто зараз
+        </p>
+        <button type="button" class="button button-primary">
+          Отримати картку
+        </button>
+        <p class="text text-description">
+          Відкриття картки ні до чого не зобов'язує. Крім рахунка ФОП у нас дуже
+          багато крутих пропозицій
+        </p>
       </div>
-    </section>
 
-    <br />
-    <hr />
-    <br />
-    <footer class="footer">
-      <div class="footer__wrapper">
-        <div class="footer__content">
-          <a href="https://www.monobank.ua">
-            monobank <span> Universal bank </span></a
-          >
+      <div class="card_image">
+        <img src="" alt="card monobank" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrapper wrapper-footer">
+    <div class="content content-footer">
+      <a href="https://www.monobank.ua">
+        monobank <span> Universal bank </span></a
+      >
+      <p class="text text-description">
+        Щоб стати клієнтом, потрібно мати смартфон на Android або iOS
+      </p>
+
+      <div class="footer__links">
+        <ul class="footer__bank-list">
+          <li class="">
+            <p class="text text-subtitle">Банк</p>
+          </li>
+          <li><a href="">Про банк</a></li>
+          <li><a href="">Кар'єра</a></li>
+          <li><a href="">Контакти</a></li>
+          <li><a href="">Умови, правила та тарифи</a></li>
+          <li><a href="">Безпека</a></li>
+          <li><a href="">API</a></li>
+        </ul>
+
+        <ul class="footer__card-list">
+          <li>
+            <p class="text text-subtitle">Картки</p>
+          </li>
+          <li><a href="">Чорна картка</a></li>
+          <li><a href="">Біла картка</a></li>
+          <li><a href="">Platinum картка</a></li>
+          <li><a href="">IRON картка</a></li>
+          <li><a href="">Дитяча картка</a></li>
+          <li><a href="">єПідтримка</a></li>
+        </ul>
+
+        <ul class="footer__products-list">
+          <li>
+            <p class="text text-subtitle">Продукти</p>
+          </li>
+          <li><a href="">Покупка частинами</a></li>
+          <li><a href="">Розстрочка</a></li>
+          <li><a href="">Міжнародні перекази</a></li>
+          <li><a href="">ФОП</a></li>
+          <li><a href="">Депозити</a></li>
+          <li><a href="">Оплата у ресторанах</a></li>
+          <li><a href="">Реєстрові виплати</a></li>
+          <li><a href="">Облігації </a></li>
+          <li><a href="">Інвестиції </a></li>
+          <li><a href="">QR-еквайринг</a></li>
+          <li><a href="">Інтернет-еквайринг </a></li>
+        </ul>
+
+        <div class="bank-info">
+          <div class="bank-info__links">
+            <a href="">
+              <svg></svg>
+            </a>
+            <a href="">
+              <svg></svg>
+            </a>
+            <a href="">
+              <svg></svg>
+            </a>
+            <a href="">
+              <svg></svg>
+            </a>
+          </div>
+          <address>
+            АТ «УНІВЕРСАЛ БАНК» Ліцензія НБУ №92 від 20.01.1994, Номер у
+            держреєстрі банків № 226
+          </address>
           <p class="text text-description">
-            Щоб стати клієнтом, потрібно мати смартфон на Android або iOS
+            Банк є учасником
+            <a href="">Фонду гарантування вкладів фізичних осіб</a>
           </p>
-
-          <div class="footer__links">
-            <ul class="footer__bank-list">
-              <li class="">
-                <p class="text text-subtitle">Банк</p>
-              </li>
-              <li><a href="">Про банк</a></li>
-              <li><a href="">Кар'єра</a></li>
-              <li><a href="">Контакти</a></li>
-              <li><a href="">Умови, правила та тарифи</a></li>
-              <li><a href="">Безпека</a></li>
-              <li><a href="">API</a></li>
-            </ul>
-
-            <ul class="footer__card-list">
-              <li>
-                <p class="text text-subtitle">Картки</p>
-              </li>
-              <li><a href="">Чорна картка</a></li>
-              <li><a href="">Біла картка</a></li>
-              <li><a href="">Platinum картка</a></li>
-              <li><a href="">IRON картка</a></li>
-              <li><a href="">Дитяча картка</a></li>
-              <li><a href="">єПідтримка</a></li>
-            </ul>
-
-            <ul class="footer__products-list">
-              <li>
-                <p class="text text-subtitle">Продукти</p>
-              </li>
-              <li><a href="">Покупка частинами</a></li>
-              <li><a href="">Розстрочка</a></li>
-              <li><a href="">Міжнародні перекази</a></li>
-              <li><a href="">ФОП</a></li>
-              <li><a href="">Депозити</a></li>
-              <li><a href="">Оплата у ресторанах</a></li>
-              <li><a href="">Реєстрові виплати</a></li>
-              <li><a href="">Облігації </a></li>
-              <li><a href="">Інвестиції </a></li>
-              <li><a href="">QR-еквайринг</a></li>
-              <li><a href="">Інтернет-еквайринг </a></li>
-            </ul>
-
-            <div class="bank-info">
-              <div class="bank-info__links">
-                <a href="">
-                  <svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                </a>
-                <a href="">
-                  <svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                </a>
-                <a href="">
-                  <svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                </a>
-                <a href="">
-                  <svg
-                    style="width: 20px; height: 20px; background: black"
-                  ></svg>
-                </a>
-              </div>
-              <address>
-                АТ «УНІВЕРСАЛ БАНК» Ліцензія НБУ №92 від 20.01.1994, Номер у
-                держреєстрі банків № 226
-              </address>
-              <p class="text text-description">
-                Банк є учасником
-                <a href="">Фонду гарантування вкладів фізичних осіб</a>
-              </p>
-            </div>
-          </div>
         </div>
       </div>
-    </footer>
-  </body>
-</html>
+    </div>
+  </div>
+</footer>
