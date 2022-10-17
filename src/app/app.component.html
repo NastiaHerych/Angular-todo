@@ -1,2 +1,29 @@
-<app-mono-fop></app-mono-fop>
-
+<app-header-common
+  [translation]="language === 'UA' ? translationUAobject : translationENobject"
+></app-header-common>
+<app-language-selector
+  [language]="language"
+  (languageChanged)="changeLanguage($event)"
+></app-language-selector>
+<app-header-additional
+  [translation]="language === 'UA' ? translationUAobject : translationENobject"
+></app-header-additional>
+<app-banner
+  [translation]="language === 'UA' ? translationUAobject : translationENobject"
+></app-banner>
+<app-accountant
+  [translation]="language === 'UA' ? translationUAobject : translationENobject"
+></app-accountant>
+<app-steps
+  [translation]="language === 'UA' ? translationUAobject : translationENobject"
+></app-steps>
+<app-tariffs
+  [translation]="language === 'UA' ? translationUAobject : translationENobject"
+></app-tariffs>
+<app-get-card
+  [translation]="language === 'UA' ? translationUAobject : translationENobject"
+></app-get-card>
+<app-footer
+  [translation]="language === 'UA' ? translationUAobject : translationENobject"
+></app-footer>
+<app-pipes></app-pipes>

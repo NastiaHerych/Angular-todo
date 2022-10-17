@@ -1,0 +1,16 @@
+<h4>Date now: {{ date | date: "fullDate" }};</h4>
+<h4>Date now: {{ date | date: "full" }};</h4>
+<h4>
+  uppercase pipe:
+  {{ "uppercasepipe convert string to uppercase in angular" | uppercase }};
+</h4>
+<h4>lowercase pipe: {{ "HELLO ANGULAR" | lowercase }};</h4>
+<p>A: {{ a | currency }}</p>
+<p>A: {{ a | currency: "CAD" }}</p>
+<p>A: {{ a | currency: "CAD":"code" }}</p>
+<p>B: {{ b | currency: "CAD":"symbol":"4.2-2" }}</p>
+<p>{{ pi | number }}</p>
+<p>{{ pi | number: "4.1-5" }}</p>
+<p>
+  {{ pi | number: "4.1-5":"fr" }}
+</p>

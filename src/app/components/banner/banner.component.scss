@@ -1,0 +1,12 @@
+.banner__description {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-self: center;
+  max-width: 500px;
+}
+
+.banner-photo {
+  width: 400px;
+  height: 350px;
+}
