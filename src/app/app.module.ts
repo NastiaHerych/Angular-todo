@@ -17,6 +17,10 @@ import { InputsComponent } from './components/inputs/inputs.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BlueSectionComponent } from './components/blue-section/blue-section.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +38,12 @@ import { PipesComponent } from './components/pipes/pipes.component';
     InputsComponent,
     ButtonsComponent,
     LanguageSelectorComponent,
-    PipesComponent
+    PipesComponent,
+    FormComponent,
+    BlueSectionComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

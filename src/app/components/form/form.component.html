@@ -1,0 +1,103 @@
+<p class="title">Create account</p>
+<div class="forms">
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <p class="form__item">
+      <label for="firstname">First Name</label>
+      <input type="text" name="firstname" [(ngModel)]="model.firstName" />
+    </p>
+
+    <p class="form__item">
+      <label for="lastname">Last Name</label>
+      <input
+        type="text"
+        id="lastname"
+        name="lastname"
+        [(ngModel)]="model.lastName"
+      />
+    </p>
+
+    <p class="form__item">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" [(ngModel)]="model.email" />
+    </p>
+
+    <p class="form__item">
+      <label for="password">Create password </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="model.password"
+      />
+    </p>
+
+    <p class="form__item">
+      <input type="checkbox" name="isAgreed" [(ngModel)]="model.agree" />
+      <label for="isAgreed">Agree with terms</label>
+    </p>
+
+    <p>
+      <button
+        type="submit"
+        [disabled]="
+          !model.firstName ||
+          !model.lastName ||
+          !model.email ||
+          !model.password ||
+          !model.agree ||
+          model.firstName.length < 2 ||
+          model.lastName.length < 2 ||
+          model.password.length < 8
+        "
+      >
+        Submit
+      </button>
+    </p>
+  </form>
+
+  <form [formGroup]="contactFormReactive" (ngSubmit)="onSubmitReactive()">
+    <p class="form__item">
+      <label for="firstname">First Name </label>
+      <input
+        type="text"
+        id="firstname"
+        name="firstname"
+        formControlName="firstname"
+      />
+    </p>
+
+    <p class="form__item">
+      <label for="lastname">Last Name </label>
+      <input
+        type="text"
+        id="lastname"
+        name="lastname"
+        formControlName="lastname"
+      />
+    </p>
+
+    <p class="form__item">
+      <label for="email">Email </label>
+      <input type="text" id="email" name="email" formControlName="email" />
+    </p>
+
+    <p class="form__item">
+      <label for="password">Password </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password"
+      />
+    </p>
+
+    <p class="form__item">
+      <input type="checkbox" name="isAgreed" formControlName="agreed" />
+      <label for="isAgreed">Agree with terms</label>
+    </p>
+
+    <p>
+      <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+    </p>
+  </form>
+</div>
