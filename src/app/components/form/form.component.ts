@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {
+  AngularFirestore,
+  AngularFirestoreCollection,
+} from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-form',
@@ -8,6 +12,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
   model: any = {};
+
+  private createUser!: AngularFirestoreCollection<any>;
+
+  constructor(private firestore: AngularFirestore) {}
+
   contactFormReactive = new FormGroup({
     firstname: new FormControl('', [
       Validators.required,
@@ -31,9 +40,21 @@ export class FormComponent implements OnInit {
 
   onSubmitReactive() {
     console.log(this.contactFormReactive.value);
+    // this.createUser
+    //   .add(this.contactFormReactive.value)
+    //   .then((res) => {
+    //     console.log('Success');
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   }
 
-  constructor() {}
+  showAll() {
+    this.createUser.get();
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.createUser = this.firestore.collection('users');
+  }
 }

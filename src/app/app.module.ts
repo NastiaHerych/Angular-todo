@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { FormsModule } from '@angular/forms';
@@ -21,6 +20,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BlueSectionComponent } from './components/blue-section/blue-section.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { OnDeleteComponent } from './components/on-delete/on-delete.component';
+import { OnCreatedComponent } from './components/on-created/on-created.component';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBmMYFVx_XFDtlKlCwagC1WJTZC6SWQGfE",
+  authDomain: "test-crud-angular-13419.firebaseapp.com",
+  projectId: "test-crud-angular-13419",
+  storageBucket: "test-crud-angular-13419.appspot.com",
+  messagingSenderId: "634571379986",
+  appId: "1:634571379986:web:2bd6a98c23a7060ff28fcb"
+};
 
 @NgModule({
   declarations: [
@@ -41,8 +58,17 @@ import { BlueSectionComponent } from './components/blue-section/blue-section.com
     PipesComponent,
     FormComponent,
     BlueSectionComponent,
+    DashboardComponent,
+    OnDeleteComponent,
+    OnCreatedComponent,
+    
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule],
   providers: [],
   bootstrap: [AppComponent],
 })
