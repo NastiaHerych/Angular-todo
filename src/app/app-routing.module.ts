@@ -9,6 +9,7 @@ import { BlueSectionComponent } from './components/blue-section/blue-section.com
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { OnCreatedComponent } from './components/on-created/on-created.component';
 import { OnDeleteComponent } from './components/on-delete/on-delete.component';
+import { UpdatePageComponent } from './components/update-page/update-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'created', component: OnCreatedComponent },
   { path: 'deleted', component: OnDeleteComponent },
+  { path: 'update/:id', component: UpdatePageComponent },
 ];
 
 @NgModule({

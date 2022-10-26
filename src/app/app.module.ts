@@ -29,14 +29,23 @@ import { environment } from '../environments/environment';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { OnDeleteComponent } from './components/on-delete/on-delete.component';
 import { OnCreatedComponent } from './components/on-created/on-created.component';
+import { UpdatePageComponent } from './components/update-page/update-page.component';
+
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';  
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBmMYFVx_XFDtlKlCwagC1WJTZC6SWQGfE",
-  authDomain: "test-crud-angular-13419.firebaseapp.com",
-  projectId: "test-crud-angular-13419",
-  storageBucket: "test-crud-angular-13419.appspot.com",
-  messagingSenderId: "634571379986",
-  appId: "1:634571379986:web:2bd6a98c23a7060ff28fcb"
+  apiKey: 'AIzaSyBmMYFVx_XFDtlKlCwagC1WJTZC6SWQGfE',
+  authDomain: 'test-crud-angular-13419.firebaseapp.com',
+  projectId: 'test-crud-angular-13419',
+  storageBucket: 'test-crud-angular-13419.appspot.com',
+  messagingSenderId: '634571379986',
+  appId: '1:634571379986:web:2bd6a98c23a7060ff28fcb',
 };
 
 @NgModule({
@@ -61,14 +70,24 @@ const firebaseConfig = {
     DashboardComponent,
     OnDeleteComponent,
     OnCreatedComponent,
-    
+    UpdatePageComponent,
+    ConfirmationDialogComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirestore(() => getFirestore()),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireDatabaseModule],
+    AngularFireDatabaseModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,MatSnackBarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

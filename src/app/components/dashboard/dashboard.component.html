@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4 mt-5">
+    <div class="col-md-3 mt-5">
       <div class="card border-0 shadow p-3">
         <div class="form-floating mb-3 text-center">
-          <h5 class="text-center text-warning">Add/Update Student</h5>
+          <h2 class="text-center text-warning">Add Student</h2>
         </div>
         <div class="form-floating mb-3">
           <input
@@ -39,7 +39,6 @@
           type="button"
           class="btn btn-outline-success"
           (click)="addStudent()"
-          routerLink="/created"
         >
           Add Student
         </button>
@@ -47,7 +46,7 @@
     </div>
 
     <div class="col-md-8 mt-2">
-      <h5 class="text-danger">Student List</h5>
+      <h2 class="text-danger">Student List</h2>
       <div class="card p-3 shadow">
         <div class="card-body">
           <table class="table table-hover">
@@ -68,19 +67,13 @@
                   <button
                     class="btn btn-outline-danger"
                     (click)="deleteStudent(studnet)"
-                    routerLink="/deleted"
                   >
                     Delete
                   </button>
+
                   <button
-                    class="btn btn-outline-info"
-                    (click)="showData(studnet)"
-                  >
-                    Show data
-                  </button>
-                  <button
-                    class="btn btn-outline-info"
-                    (click)="updateStudent(studnet)"
+                    class="btn btn-outline-warning"
+                    routerLink="/update/{{ studnet.id }}"
                   >
                     Update
                   </button>
