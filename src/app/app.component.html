@@ -49,10 +49,30 @@
 <app-get-card
   [translation]="language === 'UA' ? translationUAobject : translationENobject"
 ></app-get-card> -->
-<router-outlet></router-outlet>
+
 <!-- <app-footer
   [translation]="language === 'UA' ? translationUAobject : translationENobject"
 ></app-footer>
 <app-pipes></app-pipes> -->
 
+<mat-toolbar color="accent">
+  Welcome to administrative tool
 
+  <ng-container
+    *ngIf="authService.currentUser$ | async as user; else loginButton"
+  >
+    <button mat-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </ng-container>
+
+  <ng-template #loginButton>
+    <button mat-button routerLink="login">
+      <mat-icon>login</mat-icon>
+      Login
+    </button>
+  </ng-template>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

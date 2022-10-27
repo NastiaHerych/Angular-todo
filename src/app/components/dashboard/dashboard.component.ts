@@ -4,6 +4,7 @@ import { StudentsService } from 'src/app/shared/students.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,11 +24,17 @@ export class DashboardComponent implements OnInit {
   last_name: string = '';
   email: string = '';
 
+ 
+
   constructor(
     private data: StudentsService,
     public dialog: MatDialog,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    private authService: AuthService
   ) {}
+
+
+   user$= this.authService.currentUser$;
 
   ngOnInit(): void {
     this.getAllStudents();

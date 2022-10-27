@@ -10,9 +10,13 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { OnCreatedComponent } from './components/on-created/on-created.component';
 import { OnDeleteComponent } from './components/on-delete/on-delete.component';
 import { UpdatePageComponent } from './components/update-page/update-page.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'sign-up', component: SignUpComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'blueSection', component: BlueSectionComponent },
   { path: 'create', component: FormComponent },

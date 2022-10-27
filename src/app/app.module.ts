@@ -35,9 +35,17 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
-import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';  
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { HotToastModule } from '@ngneat/hot-toast';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBmMYFVx_XFDtlKlCwagC1WJTZC6SWQGfE',
@@ -72,6 +80,8 @@ const firebaseConfig = {
     OnCreatedComponent,
     UpdatePageComponent,
     ConfirmationDialogComponent,
+    LoginPageComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,7 +96,14 @@ const firebaseConfig = {
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatButtonModule,MatSnackBarModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HotToastModule.forRoot(),
+    provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent],
