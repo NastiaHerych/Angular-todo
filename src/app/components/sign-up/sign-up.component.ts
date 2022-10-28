@@ -9,7 +9,6 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
-import { switchMap } from 'rxjs';
 import { AuthService } from 'src/app/shared/auth.service';
 
 export function passwordsMatchValidator(): ValidatorFn {
@@ -35,7 +34,12 @@ export class SignUpComponent implements OnInit {
     {
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', Validators.required),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.pattern(
+          '^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$'
+        ),
+      ]),
       confirmPassword: new FormControl('', Validators.required),
     },
     { validators: passwordsMatchValidator() }
@@ -67,7 +71,6 @@ export class SignUpComponent implements OnInit {
 
   submit() {
     const { name, email, password } = this.signUpForm.value;
-
     if (!this.signUpForm.valid || !name || !password || !email) {
       return;
     }

@@ -1,7 +1,7 @@
 <ng-container *ngIf="user$ | async as user">
-  <h1>Hi, {{ user.email }}</h1>
+  <h2 class="text-danger margin-top margin-left">User id: {{ user.email }}</h2>
 </ng-container>
-<div class="container-fluid">
+<div class="wrapper">
   <div class="row">
     <div class="col-md-3 mt-5">
       <div class="card border-0 shadow p-3">

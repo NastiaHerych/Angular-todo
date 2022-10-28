@@ -1,4 +1,11 @@
-.wrapper{
-    display: flex;
-    justify-content: center;
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-update {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }

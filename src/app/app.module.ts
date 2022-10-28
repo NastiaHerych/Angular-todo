@@ -13,28 +13,24 @@ import { TariffsComponent } from './components/tariffs/tariffs.component';
 import { GetCardComponent } from './components/get-card/get-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InputsComponent } from './components/inputs/inputs.component';
-import { ButtonsComponent } from './components/buttons/buttons.component';
 import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BlueSectionComponent } from './components/blue-section/blue-section.component';
-import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { environment } from '../environments/environment';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { OnDeleteComponent } from './components/on-delete/on-delete.component';
 import { OnCreatedComponent } from './components/on-created/on-created.component';
 import { UpdatePageComponent } from './components/update-page/update-page.component';
-
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -70,7 +66,6 @@ const firebaseConfig = {
     GetCardComponent,
     FooterComponent,
     InputsComponent,
-    ButtonsComponent,
     LanguageSelectorComponent,
     PipesComponent,
     FormComponent,
