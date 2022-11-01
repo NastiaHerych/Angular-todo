@@ -42,6 +42,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { provideAuth, getAuth } from '@angular/fire/auth';
+import { HighlightDirective } from './highlight.directive';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBmMYFVx_XFDtlKlCwagC1WJTZC6SWQGfE',
@@ -77,6 +78,7 @@ const firebaseConfig = {
     ConfirmationDialogComponent,
     LoginPageComponent,
     SignUpComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
