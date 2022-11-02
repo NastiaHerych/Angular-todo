@@ -10,14 +10,14 @@
 
 .form__item {
   padding: 12px 20px;
-}
+  
+  label {
+    display: block;
+    padding-bottom: 5px;
+  }
 
-.form__item label {
-  display: block;
-  padding-bottom: 5px;
-}
-
-.form__item input {
-  margin: 3px;
-  border: 1px solid gray;
+  input {
+    margin: 3px;
+    border: 1px solid gray;
+  }
 }

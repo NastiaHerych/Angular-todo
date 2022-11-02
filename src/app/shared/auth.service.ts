@@ -4,7 +4,6 @@ import {
   authState,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  updateProfile,
   UserCredential,
 } from '@angular/fire/auth';
 import { from, Observable, switchMap } from 'rxjs';

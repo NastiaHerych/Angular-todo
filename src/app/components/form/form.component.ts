@@ -17,6 +17,8 @@ export class FormComponent implements OnInit {
 
   constructor(private firestore: AngularFirestore) {}
 
+  checkPassword = new RegExp('^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$'); 
+
   contactFormReactive = new FormGroup({
     firstname: new FormControl('', [
       Validators.required,
@@ -29,26 +31,11 @@ export class FormComponent implements OnInit {
     email: new FormControl('', [Validators.email, Validators.required]),
     password: new FormControl('', [
       Validators.required,
-      Validators.pattern('^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$'),
+      Validators.pattern(this.checkPassword),
     ]),
     agreed: new FormControl('', [Validators.required]),
   });
 
-  onSubmit(contactForm: { value: any }) {
-    console.log(contactForm.value);
-  }
-
-  onSubmitReactive() {
-    console.log(this.contactFormReactive.value);
-    // this.createUser
-    //   .add(this.contactFormReactive.value)
-    //   .then((res) => {
-    //     console.log('Success');
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-  }
 
   showAll() {
     this.createUser.get();

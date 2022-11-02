@@ -29,16 +29,19 @@ export function passwordsMatchValidator(): ValidatorFn {
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss'],
 })
+
 export class SignUpComponent implements OnInit {
+  passwordValidate = new RegExp(
+    '^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$'
+  );
+
   signUpForm = new FormGroup(
     {
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [
         Validators.required,
-        Validators.pattern(
-          '^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$'
-        ),
+        Validators.pattern(this.passwordValidate),
       ]),
       confirmPassword: new FormControl('', Validators.required),
     },

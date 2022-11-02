@@ -1,6 +1,6 @@
 <p class="title">Create account</p>
 <div class="forms">
-  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <form #contactForm="ngForm">
     <p class="form__item">
       <label for="firstname">First Name</label>
       <input type="text" name="firstname" [(ngModel)]="model.firstName" />
@@ -55,7 +55,7 @@
     </p>
   </form>
 
-  <form [formGroup]="contactFormReactive" (ngSubmit)="onSubmitReactive()">
+  <form [formGroup]="contactFormReactive">
     <p class="form__item">
       <label for="firstname">First Name </label>
       <input

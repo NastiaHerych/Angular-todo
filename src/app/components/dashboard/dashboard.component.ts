@@ -24,8 +24,6 @@ export class DashboardComponent implements OnInit {
   last_name: string = '';
   email: string = '';
 
- 
-
   constructor(
     private data: StudentsService,
     public dialog: MatDialog,
@@ -33,8 +31,7 @@ export class DashboardComponent implements OnInit {
     private authService: AuthService
   ) {}
 
-
-   user$= this.authService.currentUser$;
+  user$ = this.authService.currentUser$;
 
   ngOnInit(): void {
     this.getAllStudents();

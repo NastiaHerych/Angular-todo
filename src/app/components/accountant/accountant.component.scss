@@ -1,28 +1,30 @@
-.accountant__img {
-  float: left;
-}
+.accountant {
+  &__img {
+    float: left;
+  }
 
-.accountant__description {
-  padding-top: 100px;
-}
+  &__description {
+    padding-top: 100px;
+  }
 
-.accountant__content-second {
-  clear: both;
-}
+  &__content-second {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 
-.accountant__content-second {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
+  &__content-second {
+    clear: both;
+  }
 
-.accountant__advantages {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  row-gap: 50px;
-}
+  &__advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    row-gap: 50px;
+  }
 
-.accountant__advantages-item {
-  max-width: 200px;
+  &__advantages-item {
+    max-width: 200px;
+  }
 }

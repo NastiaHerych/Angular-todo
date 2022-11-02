@@ -5,13 +5,28 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+  enum languages {
+    UA = "UA",
+    EN = "EN"
+  }
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
+
 export class AppComponent {
   constructor(public authService: AuthService, private router: Router) {}
+
+  doTranslate() {
+    switch (this.language) {
+      case 'UA':
+        return this.translationUAobject;
+      case 'EN':
+        return this.translationENobject;
+    }
+  }
 
   logout() {
     this.authService.logout().subscribe(() => {
